@@ -29,13 +29,15 @@ type DatabaseServerSpec struct {
 	// Important: Run "make" to regenerate code after modifying this file
 
 	// Foo is an example field of DatabaseServer. Edit databaseserver_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	//Foo string `json:"foo,omitempty"`
+	Databases map[string]string `json:"databases,omitempty"`
 }
 
 // DatabaseServerStatus defines the observed state of DatabaseServer
 type DatabaseServerStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
+	ID *string `json:"id,omitempty"`
 }
 
 //+kubebuilder:object:root=true
